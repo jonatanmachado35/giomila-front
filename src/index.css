@@ -85,3 +85,9 @@
   }
 }
 
+@layer components {
+  /* Garantir contraste em tooltips do Recharts no modo escuro */
+  .recharts-default-tooltip {
+    color: hsl(var(--popover-foreground));
+  }
+}

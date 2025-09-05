@@ -31,8 +31,9 @@ export const EventChart = ({ data, title }: EventChartProps) => {
                 backgroundColor: "hsl(var(--popover))",
                 border: "1px solid hsl(var(--border))",
                 borderRadius: "8px",
-                color: "hsl(var(--popover-foreground))"
               }}
+              labelStyle={{ color: "hsl(var(--popover-foreground))" }}
+              itemStyle={{ color: "hsl(var(--foreground))" }}
             />
             <Bar 
               dataKey="events" 
