@@ -8,7 +8,7 @@ import { Activity, Eye } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useDashboardData } from "@/hooks/use-dashboard-data";
 
-const Index = () => {
+const Dashboard = () => {
   const { data, loading, error } = useDashboardData();
 
   return (
@@ -47,7 +47,7 @@ const Index = () => {
             trendValue={`+${data.metrics.monthlyIncrease}%`}
             variant="default"
           />
-          
+
           <MetricCard
             title="Motoristas Ativos"
             value={data.metrics.activeDrivers}
@@ -55,14 +55,14 @@ const Index = () => {
             trend="neutral"
             variant="success"
           />
-          
+
           <MetricCard
             title="Horário de Pico"
             value={data.metrics.peakHour}
             subtitle="Mais eventos"
             variant="warning"
           />
-          
+
           <MetricCard
             title="Alertas de Fadiga"
             value={data.metrics.fatigueAlerts}
@@ -79,7 +79,7 @@ const Index = () => {
             data={data.hourlyEvents}
             title="Eventos por Horário"
           />
-          
+
           <BehaviorChart
             data={data.events}
             title="Tipos de Eventos Mais Frequentes"
@@ -94,7 +94,7 @@ const Index = () => {
               title="Top Motoristas com Mais Eventos"
             />
           </div>
-          
+
           <div className="space-y-6">
             {/* Card de Comportamentos */}
             <div className="bg-card border rounded-lg p-6 shadow-card">
@@ -138,4 +138,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Dashboard;
